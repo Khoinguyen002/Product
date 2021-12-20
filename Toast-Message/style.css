@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Common */
+
+body {
+  display: flex;
+  height: 100vh;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#toast {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.toast {
+  display: flex;
+  box-shadow: 0 0 10px rgb(236, 236, 236);
+  min-width: 400px;
+  max-width: 480px;
+  height: 120px;
+  padding: 30px;
+  border-radius: 30px;
+ 
+}
+
+.toast + .toast {
+  margin-top: 10px;
+}
+
+.toast .body {
+  padding-left: 20px;
+  flex-grow: 1;
+}
+
+.fa-times {
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.fa-times:hover {
+  opacity: 1;
+}
+
+.time {
+  opacity: 0.5;
+  font-size: 15px;
+}
+
+.message {
+  line-height: 24px;
+  
+}
+
+/* Particular */
+
+.toast__success .fa-check-circle {
+  color: #3ec43b;
+  font-size: 25px; 
+}
+
+.toast__warning .fa-exclamation-triangle {
+  color: #f1a060;
+  font-size: 25px; 
+}
+.toast__error .fa-exclamation-triangle {
+  color: #ff623d;
+  font-size: 25px; 
+}
+
+.toast__success {
+  border-left: #3ec43b solid 5px;
+}
+
+.toast__warning {
+  border-left: #f1a060 solid 5px;
+}
+
+.toast__error {
+  border-left: #ff623d solid 5px;
+}
+
+body > div {
+  margin: auto;
+  display: flex;
+
+}
+
+.btn {
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 30px;
+  min-width: 120px;
+  padding: 12px 48px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
+.btn--success {
+  background-color: #71be34;
+}
+
+.btn--warning {
+  background-color: #ffb702;
+}
+
+.btn--error {
+  background-color: #ff623d;
+}
+
+.btn--disabled {
+  opacity: 0.5 !important;
+  cursor: default;
+}
+
+.btn--size-l {
+  padding: 16px 54px ;
+}
+
+.btn--size-s {
+  padding: 8px 36px ;
+
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(calc(100% + 32px))
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}

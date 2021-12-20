@@ -1,0 +1,46 @@
+{
+  "songs": [
+    {
+      "id": 0,
+      "name": "Ái Nộ",
+      "singer": "Masew & KhôiVũ",
+      "path": "./asset/music/ÁiNộ-Masew,KhôiVũ.mp3",
+      "image": "./asset/picture/ai_no.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Sài Gòn hôm nay mưa",
+      "singer": "JSOL & HOÀNG DUYÊN",
+      "path": "./asset/music/Sài-Gòn-Hôm-Nay-Mưa-JSOL, Hoàng-Duyên.mp3",
+      "image": "./asset/picture/saigonhomnaymua.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Đường Tôi Chở Em Về",
+      "singer": "BuiTruongLinh",
+      "path": "./asset/music/ĐườngTôiChởEmVề-BùiTrườngLinh.mp3",
+      "image": "./asset/picture/duongtoichoemve.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Larg",
+      "singer": "Elgit Doda",
+      "path": "./asset/music/Larg-Elgit Doda.mp3",
+      "image": "./asset/picture/larg.jpg"
+    },
+    {
+      "id": 4,
+      "name": "колыбельная",
+      "singer": "Rauf & Faik",
+      "path": "./asset/music/Downloadnhạchotколыбельная(Lullaby)Mp3.mp3",
+      "image": "./asset/picture/колыбельная .jpg"
+    },
+    {
+      "id": 6,
+      "name": "Khi Em Lớn",
+      "singer": "Orang x Hoàng Dũng",
+      "path": "./asset/music/Khi Em Lớn - Orange, Hoàng Dũng - Bàihát lyrics.mp3",
+      "image": "./asset/picture/khiemlon.jpg"
+    }
+  ]
+}

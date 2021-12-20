@@ -1,0 +1,127 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  max-width: 1360px;
+  margin: auto;
+}
+
+.wrapNav__pc {
+  background-color: #333;
+  height: 40px;
+  position: relative;
+}
+
+.nav__list {
+  list-style-type: none;
+  height: 40px;
+  align-items: center;
+
+}
+
+.nav__item {
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 17px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav__item:hover {
+  background-color: #ccc;
+  color: #333;
+}
+
+.nav__bar {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  display: none;
+}
+
+.fas.fa-bars {
+  color: #fff;
+  font-size: 25px;
+  
+}
+
+.nav__overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  animation: overlayapp 0.5s linear;
+}
+
+.nav__alt {
+  width: 320px;
+  height: 50vh;
+  max-width: 100%;
+  background-color: #fff;
+  margin: auto;
+  animation: appearBarAlt 0.5s ease;
+  position: relative;
+}
+
+.nav__overlay.active {
+  display: flex;
+}
+.fas.fa-times {
+  font-size: 30px;
+  position: absolute;
+  padding: 15px;
+  right: 0;
+
+}
+
+.nav__list__alt {
+  list-style-type: none;
+}
+
+.nav__item__alt {
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: larger;
+
+}
+
+.fas.fa-bars:active {
+
+}
+
+@media (max-width: 1023px) {
+  .nav__bar {
+    display: block;
+  }
+  .nav__item {
+    display: none;
+  }
+}
+
+@keyframes appearBarAlt {
+  from {
+    transform: translateY(-320px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes overlayapp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

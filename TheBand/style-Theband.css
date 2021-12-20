@@ -1,0 +1,624 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+    
+    
+}
+
+/* 1.Làm từ ngoài vào trong.
+   2.Từ trên xuống dưới.
+   3.Từ tổng quan đến chi tiết.
+*/
+/* Đặt câu hỏi
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng ( kiểu chữ
+*/
+
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    right: 0;
+    z-index: 1;
+
+}
+#nav {
+    display: inline-block; 
+}
+#nav > li {
+    position: relative; 
+}
+
+#nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li a {
+    text-decoration:none;
+    line-height: 46px;
+    padding: 0px 23px;
+    font-size: 15px;
+    display: inline-block;
+}
+
+#nav > li:hover > a {
+    background-color: #ccc;
+    color: #000;
+}
+
+#nav .subnav li:hover {
+    background-color: #ccc;
+    color: #000;   
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style-type: none;
+    width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   
+}
+
+#nav .subnav a {
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+  
+    
+}
+
+#nav .ti-arrow-circle-down {
+    font-size: 14px;
+}
+#header .box-search-alt,
+#header .box-search {
+    float: right;
+}
+#header .ti-menu-alt,
+#header .ti-search {
+    color:#fff;
+    line-height: 46px;
+    padding: 0px 23px;    
+}
+#header .ti-search {
+    display: block; 
+}
+#header .ti-menu-alt:hover,
+#header .ti-search:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+#header .ti-menu-alt {
+    display: none;
+}
+/*  THE END OF THE HEADER */
+
+#slider {
+    position: relative;
+    margin-top: 46px;   
+    padding-top: 50%;
+    background: url("./asset/chicago.jpg") top center/ cover no-repeat ;
+    
+}
+#slider .text-content {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    /* left: calc((100vw - 371.55px)/2); */
+    /* width: 100%; */
+    right: 0;
+    left: 0;  
+}
+
+#slider .text-heading {
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-description {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+#content .about-section {
+    width: 768px;
+    /* margin-left: auto;   --> cách căn giữa 1 box.
+    margin-right: auto; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 64px;
+    max-width: calc(100% - 32px);
+    
+}
+#content .content-about {
+    padding-bottom: 15px;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 15px;
+}
+#content .info {
+    padding: 32px 0;
+    /* overflow: hidden;1 cách khác của clear:both để fix lỗi out box khi dùng float*/
+    display: flex;
+}
+.clear {
+    clear:both;
+}
+#content .info .mem {
+    width: 100%;
+    font-size: 15px;
+    
+    
+}
+#content .info .mem .imgchange {
+    width: 60%;
+    margin-bottom: 16px;
+    border-radius: 5%;
+}
+/* common */
+#content .heading {
+    padding-top: 74px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    opacity: 0.9;
+}
+#content .slogan {
+    text-align: center;
+    padding-top: 25px;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.5;
+    margin-bottom: 15px;
+
+}
+#content .tour-section {
+    background-color: #000;
+}
+#content .wraptour {
+    width: 769px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    max-width: calc(100% - 32px);
+    
+}
+
+#content .ticket-stt {
+    background-color: #fff;
+    display: inline-block;
+    width: 100%;
+    list-style-type: none;
+}
+#content .tour-section .month {
+    border-bottom: #ddd 1px solid ; 
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 8px 16px;
+    color: #757575;
+}
+#content .stt {
+    margin-left: 16px;
+    padding: 2px 8px;
+    background-color: #f44336;
+    color: #fff;
+    
+}
+#content .rest-ticket {
+    float: right;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 0 7px;
+    color: #fff;
+    margin-right: 10px;
+}
+#content .wrap-location {
+    overflow: hidden;
+    padding: 32px 0px 112px 0px !important;
+    margin-left: -8px; /* kĩ thuật căng đều 2 bên*/
+    margin-right: -8px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+#content .location {
+    width: 33.33333%;
+    font-size: 15px;
+    line-height: 1.5;
+    
+    padding: 0 8px;
+
+} 
+#content .location-img {
+    width: 100%;
+    vertical-align: middle;
+}    
+#content .location-img:hover {
+    opacity: 0.6;
+}
+#content .info-location {
+    background-color: #fff;
+    padding: 16px;
+    
+}
+#content .info-location-header {
+    font-weight: bolder;
+    padding-bottom: 15px ;
+}
+#content .info-location-date {
+    opacity: 0.6;
+    margin-bottom: 15px;
+}
+#content .info-location-content {
+    margin-bottom: 15px;
+}
+#content .button-buy {
+    background-color: black;
+    color: #fff;
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    
+}
+#content .button-buy:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+/* End of Tour dates */
+/* Begin of Contact */
+
+.wrap-contact {
+    width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(100% - 32px);
+    overflow: hidden;
+    padding: 32px 0;
+    margin-bottom: 80px;
+    display: flex;
+    
+}
+
+.contact-addr {
+    width: 50%;
+    
+}   
+.address {
+    line-height: 1.5;
+    
+}
+.ti-link,
+.ti-email,
+.ti-home {
+    margin-right: 20px;
+    margin-top: 4px;
+    
+}
+.user-info {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    
+}
+.input {
+    width: 100%;
+    padding: 11px;
+    border-width: thin;
+    border-style: solid;
+    border-color: #d9d9d9;
+}
+
+.user-name {
+    width: 50%;
+    padding: 0 8px 8px 0;
+    
+}
+.user-email {
+    width: 50%;
+    padding: 0 0 8px 8px;
+}
+.user-mess {
+    width: 100%;
+}
+.inside-send-butn:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.inside-send-butn {
+    border: none;
+    color:#fff;
+    background-color: #000;
+    padding: 8px 16px;
+    margin-top: 16px;
+    font-size: 14px;
+    
+    
+    
+}
+.img-byfooter {
+    width: 100%;
+}
+
+#footer {
+    text-align: center;
+    padding: 64px;
+    opacity: 0.6;
+    background-color: rgb(233, 233, 233);
+      
+}
+#footer i {
+    font-size: 20px;
+}
+#footer i:hover {
+    opacity: 0.5;
+}
+#footer a:hover {
+    opacity: 0.5;
+}
+.modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    display: none;
+}
+.modal.open {
+    display: block;
+
+}
+.modal .content-modal {
+    position: relative;
+    width: 900px;
+    height: 470px;;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: modalappear ease 0.3s;
+   
+}
+.word-head {
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 30px;
+    padding: 42px 0;
+    background-color: #009688;
+    color: #fff;
+    
+}
+.exit-but {
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 13px;
+    padding: 15px;
+}
+.exit-but-alt:hover,
+.exit-but:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.content-modal {
+    max-width: calc(100% - 32px);
+}
+.body-modal {
+    background-color: #fff;
+    overflow: hidden;
+    padding: 16px;
+    
+}
+.info-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin: 20px 0;
+    border:  solid rgba(207, 207, 207, 1) ;
+    border-width: 1px;
+    
+}
+.pay-but {
+    background-color: #009688;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0; 
+}
+.pay-but:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.close-but {
+    display: inline-block ;
+    background-color: rgb(244, 67, 54);
+    text-align: center; 
+    padding: 8px 16px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 32px;
+}
+.close-but:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.help-modal {
+    display: block ;
+    float: right;
+    font-size: 15px;
+    
+    
+    
+}
+.ti-close {
+    font-size: 12px;
+}
+.modal-alt {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    display: none;
+    animation: modal-layout ease 0.3s
+    
+}
+.content-modal-alt {
+    position: relative;
+    animation: modal-alt ease 0.3s;
+    
+}
+#nav-alt {
+    list-style-type: none;
+    display: block;
+    background-color: #fff;
+    width: 50%;
+    float: right;
+}
+
+#nav-alt li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 18px 23px;
+    font-size: 15px;
+    display: block;
+    color: #000;
+}
+
+#nav-alt li:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+.menu-alt-close {
+    line-height: 46px;
+    padding: 0px 23px; 
+    text-align: left;
+    border-bottom: rgb(214, 214, 214) 1px solid;
+    
+}
+.menu-alt-close:hover {
+    cursor: pointer;
+    background-color: rgb(244, 67, 54);
+    color: #fff;
+}
+.modal-alt.open {
+    display: block;
+}
+
+@keyframes modalappear {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes modal-alt {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+        
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes modal-layout {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 739px) {
+    #content .info {
+        flex-direction: column;
+    }
+    #content .wrap-location {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+    #content .location {
+        width: 100%;
+        padding-top: 16px;
+    }
+    #contact .contact-addr,
+    #contact .user-info {
+        width: 100%;
+    }
+    #contact .wrap-contact {
+        flex-direction: column;
+    }
+    #contact .user-info {
+        padding-top: 16px;
+    }
+    .user-info .user-email,
+    .user-info .user-name {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 8px;
+    }
+    .user-info .input {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    .input:focus-visible {
+        outline-color: #d9d9d9;
+    }
+    #header .ti-search,
+    #nav {
+        display: none;
+    }
+    
+    #header .ti-menu-alt  {
+        display: block ;
+        
+    }
+    
+}
+
+
+
