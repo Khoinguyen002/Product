@@ -13,7 +13,7 @@ const prevSongBtn = $('.btn-prev')
 const randomSongBtn = $('.btn-random')
 const repeatSongBtn = $('.btn-repeat')
 var listSongIndexRandomed =[]
-var songsApi = 'https://my-json-server.typicode.com/Khoinguyen002/Production/songs'
+var songsApi = 'http://localhost:3000/songs'
 
 
 const app = {
