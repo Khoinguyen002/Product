@@ -267,6 +267,3 @@ const app = {
     }                
 }
 app.start()
-window.onload = () => {
-    console.log('hihi');
-}
