@@ -246,7 +246,6 @@ const app = {
         fetch(songsApi)
             .then(response => response.json())
             .then(listsongs =>  {
-                console.log(listsongs)
                 // Định nghĩa thuộc tính (flex) cho object
                 this.defineProperties(listsongs)
 
