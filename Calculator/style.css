@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+#wrapper {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+th,td {
+    border : 1px solid #198754 !important;
+    margin: 1px;
+    padding: 5px;
+}
+
+
+
+label {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 20px !important;
+}
+
+.del {
+    margin-top: 0;
+}
+
+label span {
+    display: inline-block;
+    width: 100px;
+}
+
+.line {
+    height: 3px;
+    border-radius: 2px;
+    background-color: #157548;
+    width: 300px;
+    margin: 10px auto;
+}
+
+#control {
+    border: #157548 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+tbody {
+    display: block;
+}
+
+tbody tr {
+    display: flex;
+    
+}
+
+th, td {
+    flex: 1;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #5BA86A;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #69c07b;
+}
+
+form, #calAver, #defineHSG {
+    display: none;
+}
+
+.del.btn.btn-danger {
+    margin-top: 0px !important;
+}

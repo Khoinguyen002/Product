@@ -1,0 +1,22 @@
+.signUp {
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+.signUp .container {
+    height: 100%;
+    align-content: center;
+}
+
+.signUp .card {
+    margin: auto;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.input-group label{
+    width: 100%;
+    color: #FF3B2E;
+}   

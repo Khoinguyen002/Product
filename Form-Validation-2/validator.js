@@ -23,7 +23,7 @@ function Validator(selector) {
           return value === formSelector.querySelector(selector).value ? '' : 'Mật khẩu không khớp'
         }
       }
-    }
+    } 
     // Định nghĩa hàm
     function validate(inputElement, formRules, ) {
       var checkcheckbox = false
@@ -102,25 +102,50 @@ function Validator(selector) {
         if (validate(inputElement, formRules)) {isValid = false}
       })
       if (isValid) {
-        var data = Array.from(inputElements).reduce((accumulator, inputElement) => {
+        // var data = Array.from(inputElements).reduce((accumulator, inputElement) => {
+        //   switch (inputElement.type) {
+        //     case 'checkbox': 
+        //       if (inputElement.matches(':checked')) {
+        //         if (Array.isArray(accumulator[inputElement.name]) ) {
+        //           accumulator[inputElement.name].push(inputElement.value)
+        //         } else accumulator[inputElement.name] = [inputElement.value]
+        //       }
+        //       break
+        //     case 'radio':
+        //       if (inputElement.checked) {
+        //         accumulator[inputElement.name] = inputElement.value
+        //       }
+        //       break
+        //     default:
+        //       if (inputElement.name !== 'password_confirmation') {
+        //         accumulator[inputElement.name] = inputElement.value
+        //       }
+        //   }    
+        //   return accumulator 
+        // }, {})
+        var data = {}
+        
+        Array.from(inputElements).forEach((inputElement) => {
           switch (inputElement.type) {
-            case 'checkbox': 
+            case 'checkbox' :
               if (inputElement.matches(':checked')) {
-                if (Array.isArray(accumulator[inputElement.name]) ) {
-                  accumulator[inputElement.name].push(inputElement.value)
-                } else accumulator[inputElement.name] = [inputElement.value]
+                if (Array.isArray(data[inputElement.name]) ) {
+                  data[inputElement.name].push(inputElement.value)
+                } else data[inputElement.name] = [inputElement.value]
               }
               break
             case 'radio':
               if (inputElement.checked) {
-                accumulator[inputElement.name] = inputElement.value
+                data[inputElement.name] = inputElement.value
               }
               break
             default:
-              accumulator[inputElement.name] = inputElement.value
+              if (inputElement.name !== 'password_confirmation') {
+                data[inputElement.name] = inputElement.value
+              }
           }    
-          return accumulator 
-        }, {})
+          
+        })
 
         getInfo(data)
       }

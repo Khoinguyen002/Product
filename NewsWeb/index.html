@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Breaking news alerts and updates from the BBC. For news, features, analysis follow @BBCWorld (international) or @BBCNews (UK). Latest sport news @BBCSport.">
+    <meta name="keywords" content="Breaking News, news">
+    <meta name="google-site-verification" content="-bq61vM6U9fgKgyrw3HhfQ_6416yg0_q55hwpHzcyn4" />
+    <title>News website</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/signInStyle.css">
+    <link rel="stylesheet" href="./css/signUpStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/css/datepicker.min.css'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+        integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V0LE8JHXVK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-V0LE8JHXVK');
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="mainNav">
+                <div class="container">
+                    <div class="slogan">
+                        <i class="fa-solid fa-atom"></i> Solutions for a smart planet
+                    </div>
+                    <div class="space"></div>
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Lang</button>
+                        <div class="dropdown-menu" name="Lang">
+                            <a class="dropdown-item" href="#" name="">None</a>
+                            <li><hr class="dropdown-divider"></li>
+                            <a class="dropdown-item" href="#" name="ar">Arabic</a>
+                            <a class="dropdown-item" href="#" name="de">German</a>
+                            <a class="dropdown-item" href="#" name="el">Greek</a>
+                            <a class="dropdown-item" href="#" name="en">English</a>
+                            <a class="dropdown-item" href="#" name="es">Spanish</a>
+                            <a class="dropdown-item" href="#" name="fr">French</a>
+                            <a class="dropdown-item" href="#" name="he">Hebrew</a>
+                            <a class="dropdown-item" href="#" name="hi">Hindi</a>
+                            <a class="dropdown-item" href="#" name="it">Italian</a>
+                            <a class="dropdown-item" href="#" name="ja">Japanese</a>
+                            <a class="dropdown-item" href="#" name="ml">Malayalam</a>
+                            <a class="dropdown-item" href="#" name="mr">Marathi</a>
+                            <a class="dropdown-item" href="#" name="nl">Dutch</a>
+                            <a class="dropdown-item" href="#" name="no">Norwegian</a>
+                            <a class="dropdown-item" href="#" name="pt">Portuguese</a>
+                            <a class="dropdown-item" href="#" name="ro">Romanian</a>
+                            <a class="dropdown-item" href="#" name="ru">Russian</a>
+                            <a class="dropdown-item" href="#" name="sv">Swedish</a>
+                            <a class="dropdown-item" href="#" name="ta">Tamil</a>
+                            <a class="dropdown-item" href="#" name="te">Telugu</a>
+                            <a class="dropdown-item" href="#" name="uk">Ukrainian</a>
+                            <a class="dropdown-item" href="#" name="zh">Chinese</a>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Country</button>
+                        <div class="dropdown-menu" name="Country">
+                            <a class="dropdown-item" href="#" name="">None</a>
+                            <li><hr class="dropdown-divider"></li>
+                            <a class="dropdown-item" href="#" name="au">Australia</a>
+                            <a class="dropdown-item" href="#" name="br">Brazil</a>
+                            <a class="dropdown-item" href="#" name="ca">Canada</a>
+                            <a class="dropdown-item" href="#" name="ch">Switzerland</a>
+                            <a class="dropdown-item" href="#" name="cn">China</a>
+                            <a class="dropdown-item" href="#" name="de">Germany</a>
+                            <a class="dropdown-item" href="#" name="eg">Egypt</a>
+                            <a class="dropdown-item" href="#" name="es">Spain</a>
+                            <a class="dropdown-item" href="#" name="fr">France</a>
+                            <a class="dropdown-item" href="#" name="gb">United Kingdom</a>
+                            <a class="dropdown-item" href="#" name="gr">Greece</a>
+                            <a class="dropdown-item" href="#" name="hk">Hong Kong</a>
+                            <a class="dropdown-item" href="#" name="ie">Ireland</a>
+                            <a class="dropdown-item" href="#" name="il">Israel</a>
+                            <a class="dropdown-item" href="#" name="in">India</a>
+                            <a class="dropdown-item" href="#" name="it">Italy</a>
+                            <a class="dropdown-item" href="#" name="jp">Japan</a>
+                            <a class="dropdown-item" href="#" name="nl">Netherlands</a>
+                            <a class="dropdown-item" href="#" name="no">Norway</a>
+                            <a class="dropdown-item" href="#" name="pe">Peru</a>
+                            <a class="dropdown-item" href="#" name="ph">Philippines</a>
+                            <a class="dropdown-item" href="#" name="pk">Pakistan</a>
+                            <a class="dropdown-item" href="#" name="pt">Portugal</a>
+                            <a class="dropdown-item" href="#" name="ro">Romania</a>
+                            <a class="dropdown-item" href="#" name="ru">Russian Federation</a>
+                            <a class="dropdown-item" href="#" name="se">Sweden</a>
+                            <a class="dropdown-item" href="#" name="sg">Singapore</a>
+                            <a class="dropdown-item" href="#" name="tw">Taiwan, Province of China</a>
+                            <a class="dropdown-item" href="#" name="ua">Ukraine</a>
+                            <a class="dropdown-item" href="#" name="us">United States</a>
+                        </div>
+                    </div>
+                    <a class="icon" href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="icon" href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="icon" href="#"><i class="fa-solid fa-envelope"></i></a>
+                    <a id="logInA" href="#">LogIn</a>
+                    <a class="signUpA" href="#">SignUp</a>
+                </div>
+            </nav>
+            <div class="container logo-ads">
+                <div class="logo">
+                    <img src="./imgs/21601.png" alt="">
+                </div>
+                <div class="ads">
+                    <img src="./imgs/dich-vu-thiet-ke-hinh-anh-quang-cao-slider.jpg" alt="">
+                </div>
+                <div class="ads">
+                    <img src="./imgs/dich-vu-thiet-ke-hinh-anh-quang-cao-slider.jpg" alt="">
+                </div>
+            </div>
+            <nav class="navbar subNav navbar-light navbar-expand-lg">
+                <div class="container">
+                    <div class="navbar-nav">
+                        <a href="#">HOME</a>
+                        <a href="#">INTRODUCTION</a>
+                        <a href="#">HELP</a>
+                        <a href="https://tawk.to/chat/620d241b1ffac05b1d7a37cd/1fs1la2vm" target="_blank">CONTACT</a>
+                    </div>
+                    <div class="btnAlt">
+                        <i class="fa-solid fa-bars" style="color: white;font-size: 20px;"></i>
+                    </div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <span>Time</span>
+                        <input type="search" class="datepicker_input form-control" aria-label="Date Picker">
+                        <i class="fa-solid fa-caret-right"></i>
+                        <input type="search" class="datepicker_input form-control" aria-label="Date Picker">
+                        <button class="btn btn-outline-primary" type="button">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <section></section>
+        <div class="menuAlt">
+            <div class="altNav">
+                <div class="btnAlt">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <a href="#">HOME</a>
+                <a href="#">INTRODUCTION</a>
+                <a href="#">HELP</a>
+                <a href="#">CONTACT</a>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6">
+                    <span>© 2022 News!- Reading Basis</span>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6>Help</h6>
+                    <a href="#">Contact</a>
+                    <a href="#">Security</a>
+                    <a href="#">Terms</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6>About News!</h6>
+                    <a href="#">Introduction</a>
+                    <a href="#">Cooperation</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6>Owner</h6>
+                    <a href="#">Representor: Nguyễn Việt Khôi</a>
+                    <a href="#">Code: 999999999</a>
+                    <a href="#">Date: 27/2/2021</a>
+                </div>
+            </div>
+            <div class="logo">
+                <i class="ti-facebook"></i>
+                <i class="ti-twitter"></i>
+                <i class="ti-github"></i>
+            </div>
+        </footer>
+    </div>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/620d241b1ffac05b1d7a37cd/1fs1la2vm';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    <script src="./main.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.1.4/dist/js/datepicker-full.min.js'></script>
+</body>
+
+</html>
