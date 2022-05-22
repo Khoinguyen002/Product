@@ -1,15 +1,15 @@
 # Product
 1. Tab UI parttern
-https://khoinguyen002.github.io/Production/BuldTapsUI/
+https://khoinguyen002.github.io/Product/BuldTapsUI/
 
 2. Grade calculator 
-https://khoinguyen002.github.io/Production/Calculator_Jquery/#
+https://khoinguyen002.github.io/Product/Calculator_Jquery/#
 
 3. Music player
-https://khoinguyen002.github.io/Production/CodeMusicPlayer/
+https://khoinguyen002.github.io/Product/CodeMusicPlayer/
 
 4. Dalat travel
-https://khoinguyen002.github.io/Production/Dalat_HTML_CSS/
+https://khoinguyen002.github.io/Product/Dalat_HTML_CSS/
 
 5. News web
-https://khoinguyen002.github.io/Production/NewsWeb/
+https://khoinguyen002.github.io/Product/NewsWeb/
