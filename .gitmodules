@@ -1,0 +1,3 @@
+[submodule "thuc-tap"]
+	path = thuc-tap
+	url = https://gitlab.com/khoi.nguyen7/thuc-tap.git
