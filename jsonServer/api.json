@@ -15,6 +15,6 @@
         {
             "name": "Residential Property",
             "imgs": ["./assets/featureImg.png", "./assets/featureImg.png", "./assets/featureImg.png"]
-        },
+        }
     ]
 }
