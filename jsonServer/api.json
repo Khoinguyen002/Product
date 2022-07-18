@@ -2,19 +2,19 @@
     "tabs": [
         {
             "name": "Residential Property",
-            "imgs": ["./assets/featureImg.png", "./assets/featureImg.png", "./assets/featureImg.png"]
+            "imgs": ["https://khoinguyen002.github.io/Product/jsonServer/assets/featureImg.png", "https://khoinguyen002.github.io/Product/jsonServer/assets/featureImg.png", "https://khoinguyen002.github.io/Product/jsonServer/assets/featureImg.png"]
         },
         {
-            "name": "Residential Property",
-            "imgs": ["./assets/featureImg.png", "./assets/featureImg.png", "./assets/featureImg.png"]
+            "name": "Commercial Property",
+            "imgs": ["https://khoinguyen002.github.io/Product/jsonServer/assets/image.png", "https://khoinguyen002.github.io/Product/jsonServer/assets/image.png", "https://khoinguyen002.github.io/Product/jsonServer/assets/image.png"]
         },
         {
-            "name": "Residential Property",
-            "imgs": ["./assets/featureImg.png", "./assets/featureImg.png", "./assets/featureImg.png"]
+            "name": "Agriculture Property",
+            "imgs": ["https://khoinguyen002.github.io/Product/jsonServer/assets/image (1).png", "https://khoinguyen002.github.io/Product/jsonServer/assets/image (1).png", "https://khoinguyen002.github.io/Product/jsonServer/assets/image (1).png"]
         },
         {
-            "name": "Residential Property",
-            "imgs": ["./assets/featureImg.png", "./assets/featureImg.png", "./assets/featureImg.png"]
+            "name": "Industrial Property",
+            "imgs": ["https://khoinguyen002.github.io/Product/jsonServer/assets/featureImg.png", "https://khoinguyen002.github.io/Product/jsonServer/assets/featureImg.png", "https://khoinguyen002.github.io/Product/jsonServer/assets/featureImg.png"]
         }
     ]
 }
