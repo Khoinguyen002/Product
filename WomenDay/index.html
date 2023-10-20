@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="icon" href="img/flowers.png" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@200;300;400;500;600;700;800&display=swap"
+			rel="stylesheet" />
+		<title>Flowers</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<style>
+			#layer {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="greetings">
+				<span class="letter">E</span>
+				<span class="letter">M</span>
+				<span style="margin-right: 20px"></span>
+				<span class="letter">L</span>
+				<span class="letter">À</span>
+
+				<span style="margin-right: 4pt"></span>
+				<br class="mobile-break" />
+
+				<span class="letter">
+					<a
+						href=""
+						id="pp_letter"
+						class="typewrite"
+						data-period="2000"
+						data-type='[ "BÉ HEO ĐÁNG IU"]'>
+						<script>
+							var TxtType = function (el, toRotate, period) {
+								this.toRotate = toRotate;
+								this.el = el;
+								this.loopNum = 0;
+								this.period = parseInt(period, 10) || 2000;
+								this.txt = "";
+								this.tick();
+								this.isDeleting = false;
+							};
+
+							TxtType.prototype.tick = function () {
+								var i = this.loopNum % this.toRotate.length;
+								var fullTxt = this.toRotate[i];
+
+								if (this.isDeleting) {
+									this.txt = fullTxt.substring(0, this.txt.length - 1);
+								} else {
+									this.txt = fullTxt.substring(0, this.txt.length + 1);
+								}
+
+								this.el.innerHTML =
+									'<span class="wrap">' + this.txt + "</span>";
+
+								var that = this;
+								var delta = 200 - Math.random() * 100;
+
+								if (this.isDeleting) {
+									delta /= 2;
+								}
+
+								if (!this.isDeleting && this.txt === fullTxt) {
+									delta = this.period;
+									this.isDeleting = true;
+								} else if (this.isDeleting && this.txt === "") {
+									this.isDeleting = false;
+									this.loopNum++;
+									delta = 500;
+								}
+
+								setTimeout(function () {
+									that.tick();
+								}, delta);
+							};
+
+							window.onload = function () {
+								var elements = document.getElementsByClassName("typewrite");
+								for (var i = 0; i < elements.length; i++) {
+									var toRotate = elements[i].getAttribute("data-type");
+									var period = elements[i].getAttribute("data-period");
+									if (toRotate) {
+										new TxtType(elements[i], JSON.parse(toRotate), period);
+									}
+								}
+								// INJECT CSS
+								var css = document.createElement("style");
+								css.type = "text/css";
+								css.innerHTML =
+									".typewrite > .wrap { border-right: 0.08em solid #fff}";
+								document.body.appendChild(css);
+							};
+						</script>
+						<span class="wrap"></span>
+					</a>
+				</span>
+
+				<br class="mobile-break" />
+				<span class="letter">C</span>
+				<span class="letter">Ủ</span>
+				<span class="letter">A</span>
+				<span style="margin-right: 20px"></span>
+				<span class="letter">A</span>
+				<span class="letter">N</span>
+				<span class="letter">H</span>
+			</div>
+			<div id="typedtext" class="csstext">
+				<script>
+					// set up text to print, each item in array is new line
+					var aText = new Array(
+						"20.10.2023 Ngày Phụ Nữ Việt Nam",
+						"Chúc cho bà, mẹ, chị em phụ nữ ",
+						"Luôn xinh đẹp, mạnh khoẻ và hạnh phúc",
+						"Chúc cho những người con gái",
+						"Luôn được yêu thương, che chở ",
+						"Tìm được người mình yêu và cũng yêu thương mình <3"
+					);
+					var iSpeed = 100; // time delay of print out
+					var iIndex = 0; // start printing array at this posision
+					var iArrLength = aText[0].length; // the length of the text array
+					var iScrollAt = 20; // start scrolling up at this many lines
+
+					var iTextPos = 0; // initialise text position
+					var sContents = ""; // initialise contents variable
+					var iRow; // initialise current row
+
+					function typewriter() {
+						sContents = " ";
+						iRow = Math.max(0, iIndex - iScrollAt);
+						var destination = document.getElementById("typedtext");
+
+						while (iRow < iIndex) {
+							sContents += aText[iRow++] + "<br>"; // Thêm thẻ <br> để tạo khoảng cách
+						}
+						destination.innerHTML =
+							sContents + aText[iIndex].substring(0, iTextPos) + "_";
+						if (iTextPos++ == iArrLength) {
+							iTextPos = 0;
+							iIndex++;
+							if (iIndex != aText.length) {
+								iArrLength = aText[iIndex].length;
+								setTimeout("typewriter()", 500);
+							}
+						} else {
+							setTimeout("typewriter()", iSpeed);
+						}
+					}
+
+					typewriter();
+				</script>
+			</div>
+			<div class="imgWrapper">
+				<img src="coloredBear.jpg" style="object-fit: contain" width="200px" />
+				<img
+					src="cuteBear.jpg"
+					id="image"
+					style="object-fit: contain"
+					width="200px" />
+			</div>
+			<script>
+				function edgeDetector() {
+					// Variables
+					this.img = undefined;
+					this.imgElement = undefined;
+					this.ctx = undefined;
+					this.canvasElement = undefined;
+					this.rawCanvas = undefined;
+					this.rawctx = undefined;
+					this.ctxDimensions = {
+						width: undefined,
+						height: undefined,
+					};
+					this.pixelData = undefined;
+					this.threshold = 30;
+					this.pointerColor = "rgba(255,0,0,1)";
+
+					this.init = function () {
+						// Build the canvas
+						var width = $(this.imgElement).width();
+						var height = $(this.imgElement).height();
+						$(
+							'<canvas id="rawData" width="' +
+								width +
+								'" height="' +
+								height +
+								'"></canvas>'
+						).insertAfter(this.imgElement);
+						$(
+							'<canvas id="layer" width="' +
+								width +
+								'" height="' +
+								height +
+								'"></canvas>'
+						).insertAfter(this.imgElement);
+
+						this.canvasElement = $("#layer")[0];
+						this.rawCanvas = $("#rawData")[0];
+						this.ctx = this.canvasElement.getContext("2d");
+						this.rawctx = this.rawCanvas.getContext("2d");
+
+						// Store the Canvas Size
+						this.ctxDimensions.width = width;
+						this.ctxDimensions.height = height;
+					};
+
+					this.findEdges = function () {
+						this.copyImage();
+						this.coreLoop();
+					};
+
+					this.copyImage = function () {
+						this.rawctx.clearRect(
+							0,
+							0,
+							this.ctxDimensions.width,
+							this.ctxDimensions.height
+						);
+						this.ctx.drawImage(
+							this.imgElement,
+							0,
+							0,
+							this.ctxDimensions.width,
+							this.ctxDimensions.height
+						);
+
+						//Grab the Pixel Data, and prepare it for use
+						this.pixelData = this.ctx.getImageData(
+							0,
+							0,
+							this.ctxDimensions.width,
+							this.ctxDimensions.height
+						);
+					};
+
+					this.coreLoop = function () {
+						var x = 0;
+						var y = 0;
+
+						var left = undefined;
+						var top = undefined;
+						var right = undefined;
+						var bottom = undefined;
+
+						for (y = 0; y < this.pixelData.height; y++) {
+							for (x = 0; x < this.pixelData.width; x++) {
+								// get this pixel's data
+								// currently, we're looking at the blue channel only.
+								// Since this is a B/W photo, all color channels are the same.
+								// ideally, we would make this work for all channels for color photos.
+								index = (x + y * this.ctxDimensions.width) * 4;
+								pixel = this.pixelData.data[index + 2];
+
+								// Get the values of the surrounding pixels
+								// Color data is stored [r,g,b,a][r,g,b,a]
+								// in sequence.
+								left = this.pixelData.data[index - 4];
+								right = this.pixelData.data[index + 2];
+								top = this.pixelData.data[index - this.ctxDimensions.width * 4];
+								bottom =
+									this.pixelData.data[index + this.ctxDimensions.width * 4];
+
+								//Compare it all.
+								// (Currently, just the left pixel)
+								if (pixel > left + this.threshold) {
+									this.plotPoint(x, y);
+								} else if (pixel < left - this.threshold) {
+									this.plotPoint(x, y);
+								} else if (pixel > right + this.threshold) {
+									this.plotPoint(x, y);
+								} else if (pixel < right - this.threshold) {
+									this.plotPoint(x, y);
+								} else if (pixel > top + this.threshold) {
+									this.plotPoint(x, y);
+								} else if (pixel < top - this.threshold) {
+									this.plotPoint(x, y);
+								} else if (pixel > bottom + this.threshold) {
+									this.plotPoint(x, y);
+								} else if (pixel < bottom - this.threshold) {
+									this.plotPoint(x, y);
+								}
+							}
+						}
+					};
+
+					this.plotPoint = function (x, y) {
+						this.ctx.beginPath();
+						this.ctx.arc(x, y, 0.5, 0, 2 * Math.PI, false);
+						this.ctx.fillStyle = "pink";
+						this.ctx.fill();
+						this.ctx.beginPath();
+
+						// Copy onto the raw canvas
+						// this is probably the most useful application of this,
+						// as you would then have raw data of the edges that can be used.
+
+						this.rawctx.beginPath();
+						this.rawctx.arc(x, y, 0.5, 0, 2 * Math.PI, false);
+						this.rawctx.fillStyle = "pink";
+						this.rawctx.fill();
+						this.rawctx.beginPath();
+					};
+				}
+
+				var edgeDetector = new edgeDetector();
+
+				$(document).ready(function () {
+					// Run at start
+					// edgeDetector.imgElement = $("#image")[0];
+					// edgeDetector.init();
+					// edgeDetector.findEdges();
+				});
+			</script>
+
+			<div class="button">
+				<a href="flower.html">
+					<div id="flower" class="rotate"></div>
+
+					<script src="hoa.js"></script>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
