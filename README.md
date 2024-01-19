@@ -13,3 +13,6 @@ https://khoinguyen002.github.io/Product/Dalat_HTML_CSS/
 
 5. News web
 https://khoinguyen002.github.io/Product/NewsWeb/
+
+6. The Band
+https://khoinguyen002.github.io/Product/TheBand/
